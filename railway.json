@@ -1,0 +1,15 @@
+{
+  "build": {
+    "builder": "railway.app/nixpacks"
+  },
+  "deploy": {
+    "startCommand": "gunicorn app:app --bind 0.0.0.0:$PORT",
+    "restartPolicyType": "always",
+    "restartPolicyMaxRetries": 5,
+    "healthchecks": {
+      "enabled": true,
+      "interval": 10,
+      "timeout": 5
+    }
+  }
+}

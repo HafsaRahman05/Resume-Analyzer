@@ -1,0 +1,23 @@
+flask==2.3.0
+flask-cors==4.0.0
+python-dotenv==1.0.0
+requests==2.31.0
+
+# FastAPI Backend
+fastapi==0.104.1
+uvicorn==0.24.0
+python-multipart==0.0.6
+
+# Database
+pymongo==4.6.0
+
+# Document Processing
+pdfplumber==0.10.3
+python-docx==0.8.11
+
+# Server
+gunicorn==21.2.0
+
+# Development
+pytest==7.4.3
+black==23.12.0
