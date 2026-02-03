@@ -1,0 +1,456 @@
+/* ---------- Reset ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ---------- Body ---------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ---------- Header / Navbar ---------- */
+header {
+    background: #1e3a8a;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+nav a:hover,
+nav a.active {
+    background: #facc15;
+    color: #1e3a8a;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-content {
+    max-width: 700px;
+}
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+    color: #f3f4f6;
+}
+.hero-btn {
+    display: inline-block;
+    padding: 14px 35px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    background: #facc15;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+.hero-btn:hover {
+    background: #eab308;
+}
+
+
+/* ---------- Features Section ---------- */
+.features-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+.features-header h2 {
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.features-header p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: auto;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+/* Grid Layout for Cards */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Feature Card Styles */
+.feature-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+.feature-card i {
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #1e3a8a;
+}
+.feature-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Hover Animation */
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .features-header h2 {
+        font-size: 2rem;
+    }
+    .features-header p {
+        font-size: 1rem;
+    }
+}
+
+/* How It Works Section */
+.how-it-works-section {
+    background: #f8f9fa;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.how-it-works-section .section-title {
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    margin-bottom: 50px;
+}
+
+/* Steps Grid */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 steps in one row on desktop */
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Step Cards */
+.step-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: #1e3a8a;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+
+/* Step Card Headings */
+.step-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #1e3a8a;
+}
+
+.step-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive: 2x2 grid on tablet, 1 column on mobile */
+@media (max-width: 992px) {
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Adjust step-number for icons */
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: #1e3a8a;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+
+/* Optional: increase icon size slightly */
+.step-number i {
+    font-size: 1.5rem;
+}
+
+
+/* ---------- Main / Tabs ---------- */
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
+    font-family: 'Inter', sans-serif;
+}
+.tab {
+    display: none;
+}
+.active-tab {
+    display: block;
+}
+
+/* ---------- Cards ---------- */
+.card {
+    background: white;
+    padding: 30px 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.card h2 {
+    margin-bottom: 20px;
+    color: #1e3a8a;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* ---------- Container ---------- */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ---------- Buttons ---------- */
+button {
+    padding: 12px 25px;
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 15px;
+}
+button:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    padding: 12px 25px;
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-primary:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* ---------- File Upload Input ---------- */
+input[type="file"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    margin: 15px auto;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+}
+input[type="file"]:hover {
+    border-color: #1e3a8a;
+}
+
+/* ---------- Output Sections ---------- */
+.output {
+    background: #f3f4f6;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+/* ---------- Pre Elements ---------- */
+pre {
+    background: #f3f4f6;
+    padding: 20px;
+    border-radius: 12px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background: #1e3a8a;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+footer p {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* ---------- Loading Spinner ---------- */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #f3f4f3;
+    border-top: 6px solid #1e3a8a;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ---------- Canvas / Chart ---------- */
+#scoreChart {
+    margin-top: 20px;
+    background: #f3f4f6;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+    .card {
+        padding: 25px 20px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 15px;
+    }
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav a {
+        margin: 10px 0 0 0;
+    }
+}
+@media (max-width: 480px) {
+    button {
+        width: 100%;
+        text-align: center;
+    }
+    pre {
+        font-size: 0.85rem;
+    }
+}
